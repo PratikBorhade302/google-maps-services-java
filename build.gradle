@@ -64,6 +64,8 @@ dependencies {
     testImplementation 'org.apache.commons:commons-lang3:3.9'
     testImplementation 'org.json:json:20180813'
     testImplementation 'io.opencensus:opencensus-impl:0.25.0'
+    implementation 'com.google.maps:google-maps-services:0.15.0'
+    implementation 'org.slf4j:slf4j-simple:1.7.25'
 }
 
 task updateVersion(type: Copy) {
@@ -95,7 +97,7 @@ java {
 
 javadoc {
     exclude '**/internal/**'
-    def currentJavaVersion = org.gradle.api.JavaVersion.current()
+    def currentJavaVersion = JavaVersion.current()
 }
 
 jacoco {
