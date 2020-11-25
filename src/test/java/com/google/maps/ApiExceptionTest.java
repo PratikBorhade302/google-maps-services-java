@@ -15,9 +15,9 @@ public class ApiExceptionTest {
     public static void main(String[] args) {
         try {
             // TODO: 25-11-2020 generate APi key
-            GeoApiContext geoApiContext = new GeoApiContext.Builder().apiKey(new String("AIzaSyDsqVv4EGJAfk8Ha4H0Cofz5I53dgZq3M4")).build();
-            String address="abb";
-            /*GeocodingResult[] results =*/  GeocodingApi.geocode(geoApiContext, address).await();
+            GeoApiContext geoApiContext = new GeoApiContext.Builder().apiKey("AIzaSyDsqVv4EGJAfk8Ha4H0Cofz5I53dgZq3M4").build();
+            String address="24%20Sussex%20Drive%20Ottawa%20ON";
+            GeocodingResult[] results =  GeocodingApi.geocode(geoApiContext, address).await();
         } catch (ApiException e) {
 
             if (e instanceof OverDailyLimitException) {
